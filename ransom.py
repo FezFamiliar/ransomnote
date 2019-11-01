@@ -17,7 +17,7 @@ for file in glob.glob("*.*"):
 
 dst_file = 'crypt.zip'
 password = generate_password()
-level = 7
+level = random.randint(0,1000000) % 10
 
 pyminizip.compress_multiple(files,[],dst_file,password,level)
 
